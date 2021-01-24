@@ -1,14 +1,11 @@
 #! /bin/bash
-printf "Be Ready to use free RDP 🥳🎉🎉" >&2
+printf "Your Free RDP is creating. Please wait...... " >&2
 {
 sudo useradd -m killer
 sudo adduser killer sudo
 echo 'killer:1234' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
-sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
-sudo apt install qbittorrent
-sudo apt-get install xarchiver
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg --install chrome-remote-desktop_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
